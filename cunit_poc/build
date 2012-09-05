@@ -1,3 +1,7 @@
+RESDIR=./junit_results
+
 make
 ./cunit_TEST
-xsltproc --novalid --stringparam suitename testall -o testall_results.xml cunit-to-junit.xsl junit_results/cunit_testall-Results.xml
+
+if [ ! -d $RESDIR ]; then  mkdir $RESDIR; fi
+xsltproc --novalid --stringparam suitename testall -o $RESDIR/junit_testall_results.xml cunit-to-junit.xsl cunit_testall-Results.xml
