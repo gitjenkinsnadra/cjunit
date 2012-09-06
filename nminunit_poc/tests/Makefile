@@ -30,8 +30,8 @@ GCC_COMMON_FLAGS= \
 -Winline \
 -Winvalid-pch \
 -Wdisabled-optimization \
--Woverlength-strings 
-#-pedantic-errors 
+-Woverlength-strings \
+-pedantic-errors 
 #-Wextra 
 
 SRC_DIR=.

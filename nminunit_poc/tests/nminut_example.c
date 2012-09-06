@@ -20,7 +20,7 @@
  
  static const char * all_tests(void) {
      mu_run_test(test_foo);
-//      mu_run_test(test_bar);
+     mu_run_test(test_bar);
      return 0;
  }
  
