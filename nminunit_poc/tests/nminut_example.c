@@ -38,5 +38,8 @@
  
      return result != 0;
      */
-    return 1;
+   
+   printf("test end\n");
+   
+    return 0;
  }
