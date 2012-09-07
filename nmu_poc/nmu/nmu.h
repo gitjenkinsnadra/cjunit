@@ -62,7 +62,7 @@
  * 
  * 
  * ====================================================================== */ 
-#define nmu_return return (nmu_checks_failed == 0);
+#define nmu_exit return ( nmu_checks_failed );
 
  
  #endif /* __NMU__  */

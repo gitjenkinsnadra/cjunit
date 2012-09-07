@@ -23,15 +23,12 @@ static void test3(void) {
  * ====================================================================== */
 int main(int argc, char **argv)
 {
-  
   test1();
   test2();
   test3();
   
   nmu_display
-  
-  /*nmu_return*/
-  return 0;
+  nmu_exit
 }
 
 
