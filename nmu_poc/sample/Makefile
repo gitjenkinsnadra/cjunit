@@ -1,9 +1,9 @@
-APPLICATION_NAME=nminut_example
+APPLICATION_NAME=nmu_sample
 APPLICATION_VERSION=0
 APPLICATION_BUILD=0
-CFLAGS_INCLUDE_DIRS="../nminunit"
+CFLAGS_INCLUDE_DIRS=-I../nmu
 LIB_DEPENDS=
-#CFLAGS_DEP=$(shell pkg-config --cflags $(LIB_DEPENDS) )
+CFLAGS_DEP=
 #LDFLAGS_DEP=$(shell pkg-config --libs $(LIB_DEPENDS) )
 GCC_COMMON_FLAGS= \
 -Wall \
@@ -40,14 +40,14 @@ CFLAGS=$(CFLAGS_DEP) $(CFLAGS_INCLUDE_DIRS) $(SYMBOL_ADDONS) $(GCC_EXTRAFLAGS) $
 NAME=$(APPLICATION_NAME)
 CC=gcc
 
-OBJ = nminut_example.o 
+OBJ = nmu_sample.o 
 
 all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@ $(LDFLAGS)
 
-nminut_example.o : ./nminut_example.c
-	$(CC) -o ./nminut_example.o -c ./nminut_example.c  $(CFLAGS) 
+nmu_sample.o : ./nmu_sample.c
+	$(CC) -o ./nmu_sample.o -c ./nmu_sample.c  $(CFLAGS) 
 
 
 
