@@ -30,7 +30,8 @@ int main(int argc, char **argv)
   
   nmu_display
   
-  nmu_return
+  /*nmu_return*/
+  return 1;
 }
 
 
