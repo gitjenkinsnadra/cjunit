@@ -1,7 +1,7 @@
-APPLICATION_NAME=nmu_sample
+APPLICATION_NAME=nmu_sample_OK
 APPLICATION_VERSION=0
 APPLICATION_BUILD=0
-CFLAGS_INCLUDE_DIRS=-I../nmu
+CFLAGS_INCLUDE_DIRS=-I../../nmu
 LIB_DEPENDS=
 CFLAGS_DEP=
 #LDFLAGS_DEP=$(shell pkg-config --libs $(LIB_DEPENDS) )
@@ -40,14 +40,14 @@ CFLAGS=$(CFLAGS_DEP) $(CFLAGS_INCLUDE_DIRS) $(SYMBOL_ADDONS) $(GCC_EXTRAFLAGS) $
 NAME=$(APPLICATION_NAME)
 CC=gcc
 
-OBJ = nmu_sample.o 
+OBJ = nmu_sample_OK.o 
 
 all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@ $(LDFLAGS)
 
-nmu_sample.o : ./nmu_sample.c
-	$(CC) -o ./nmu_sample.o -c ./nmu_sample.c  $(CFLAGS) 
+nmu_sample_OK.o : ./nmu_sample_OK.c
+	$(CC) -o ./nmu_sample_OK.o -c ./nmu_sample_OK.c  $(CFLAGS) 
 
 
 
