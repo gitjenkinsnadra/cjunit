@@ -36,7 +36,7 @@
  * 
  * 
  * ====================================================================== */
-#define nmu_decl(NMU_TEST_NAME)\
+#define nmu_declare(NMU_TEST_NAME)\
   static int nmu_checks_run=0;\
   static int nmu_checks_ok=0;\
   static int nmu_checks_failed=0;\
@@ -47,16 +47,22 @@
  * 
  * 
  * ====================================================================== */ 
-#define nmu_end do {\
-  int res = (nmu_checks_failed == 0);\
+#define nmu_display do {\
   printf("%s;tst;%d;%d;%d;%s\n", \
     nmu_test_name, \
     nmu_checks_run,\
     nmu_checks_ok,\
     nmu_checks_failed,\
-    (res) ? "OK;":"KO;"\
+    (nmu_checks_failed == 0) ? "OK;":"KO;"\
   );\
-  return (res);\
 }while(0);
+/* ======================================================================
+ * 
+ * 
+ * 
+ * 
+ * ====================================================================== */ 
+#define nmu_return return (nmu_checks_failed == 0);
+
  
  #endif /* __NMU__  */

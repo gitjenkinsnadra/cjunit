@@ -1,5 +1,5 @@
 #include "nmu.h"
-nmu_decl("nmu_example")
+nmu_declare("nmu_example")
 
 /* ======================================================================
  * 
@@ -28,7 +28,9 @@ int main(int argc, char **argv)
   test2();
   test3();
   
-  nmu_end
+  nmu_display
+  
+  nmu_return
 }
 
 
