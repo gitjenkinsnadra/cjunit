@@ -1,1 +1,1 @@
-make clean && make && ./nmu_sample_OK
+make clean && make && ./nmu_sample_random
