@@ -106,6 +106,14 @@
     nmu_checks_failed,\
     (nmu_checks_failed == 0) ? "OK;":"KO;"\
   );\
+  if( nmu_output_file )\
+  fprintf(nmu_output_file, "%s;res;%d;%d;%d;%s\n", \
+    nmu_test_name, \
+    nmu_checks_run,\
+    nmu_checks_ok,\
+    nmu_checks_failed,\
+    (nmu_checks_failed == 0) ? "OK;":"KO;"\
+  );\
 }while(0);
 /* ======================================================================
  * 
