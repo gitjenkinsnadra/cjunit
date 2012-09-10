@@ -1,29 +1,16 @@
-/* ======================================================================
- * 
- * 
- * 
- * 
- * ====================================================================== */
 #include <stdlib.h>
 #include <time.h>
+#include "nmu.h"
 /* ======================================================================
  * 
  * 
  * 
  * 
  * ====================================================================== */
-#include "nmu.h"
-nmu_declare("nmu_sample_random")
-
-
 int main(int argc, char **argv)
 {
-  
-  /* test header */
-  {
-    nmu_header
-  }  
-  
+  nmu_begin("nmu_sample_random")
+
   /* call your test here */
   {
     int rand_value;
@@ -33,11 +20,7 @@ int main(int argc, char **argv)
     nmu_assert( ( rand_value > 2 ), "RANDOM");
   }
 
-  /* test result */
-  {
-    nmu_display
-    nmu_exit
-  }
+  nmu_end
 }
 
 

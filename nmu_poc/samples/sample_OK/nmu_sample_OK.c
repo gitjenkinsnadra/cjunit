@@ -1,5 +1,4 @@
 #include "nmu.h"
-nmu_declare("nmu_sample_OK")
 
 /* ======================================================================
  * 
@@ -9,12 +8,8 @@ nmu_declare("nmu_sample_OK")
  * ====================================================================== */
 int main(int argc, char **argv)
 {
+  nmu_begin("nmu_sample_OK")
   
-  /* test header */
-  {
-    nmu_header
-  }  
-
   /* call your test here */
   {
     nmu_assert( (99 == 99), "CR1");
@@ -22,11 +17,7 @@ int main(int argc, char **argv)
     nmu_assert( (15 == 15), "CR5");   
   }
 
-  /* test result */
-  {
-    nmu_display
-    nmu_exit
-  }
+  nmu_end
 }
 
 
