@@ -7,7 +7,6 @@ CFLAGS_DEP=
 #LDFLAGS_DEP=$(shell pkg-config --libs $(LIB_DEPENDS) )
 GCC_COMMON_FLAGS= \
 -Wall \
--Wdouble-promotion \
 -Winit-self \
 -Wmissing-include-dirs \
 -Wswitch-default \
@@ -18,7 +17,6 @@ GCC_COMMON_FLAGS= \
 -Wcast-qual \
 -Wcast-align \
 -Wwrite-strings \
--Wjump-misses-init \
 -Wlogical-op \
 -Wstrict-prototypes \
 -Wold-style-definition \
@@ -33,6 +31,8 @@ GCC_COMMON_FLAGS= \
 -Woverlength-strings \
 -pedantic-errors 
 #-Wextra 
+#-Wdouble-promotion 
+#-Wjump-misses-init 
 
 SRC_DIR=.
 LDFLAGS=$(LDFLAGS_DEP) $(GCC_LD_EXTRAFLAGS)
