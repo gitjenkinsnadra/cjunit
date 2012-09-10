@@ -9,6 +9,11 @@ nmu_declare("nmu_sample_OK")
  * ====================================================================== */
 int main(int argc, char **argv)
 {
+  
+  /* test header */
+  {
+    nmu_header
+  }  
 
   /* call your test here */
   {
@@ -17,7 +22,7 @@ int main(int argc, char **argv)
     nmu_assert( (15 == 15), "CR5");   
   }
 
-  /* display and return result */
+  /* test result */
   {
     nmu_display
     nmu_exit

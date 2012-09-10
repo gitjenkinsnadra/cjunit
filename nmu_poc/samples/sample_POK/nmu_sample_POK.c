@@ -9,6 +9,11 @@ nmu_declare("nmu_sample_POK")
  * ====================================================================== */
 int main(int argc, char **argv)
 {
+  
+  /* test header */
+  {
+    nmu_header
+  }  
 
   /* call your test here */
   {
