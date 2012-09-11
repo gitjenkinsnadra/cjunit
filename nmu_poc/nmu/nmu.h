@@ -12,13 +12,13 @@
 #define nmu_assert(TEST, MESSAGE_TEST)\
  do { \
    if ( !(TEST) ) {\
-     printf("%s;chk;%s;%d;KO;%s;\n",\
+     printf("chk;%s;%s;%d;KO;%s;\n",\
        nmu_test_name,\
        (MESSAGE_TEST),\
        nmu_checks_run,\
        #TEST ); \
        if(nmu_output_file_init_ok)\
-         fprintf(nmu_output_file, "%s;chk;%s;%d;KO;%s;\n",\
+         fprintf(nmu_output_file, "chk;%s;%s;%d;KO;%s;\n",\
          nmu_test_name,\
          (MESSAGE_TEST),\
          nmu_checks_run,\
@@ -27,13 +27,13 @@
      }\
      else \
      {\
-     printf("%s;chk;%s;%d;OK;%s;\n",\
+     printf("chk;%s;%s;%d;OK;%s;\n",\
        nmu_test_name,\
        (MESSAGE_TEST),\
        nmu_checks_run,\
        #TEST); \
        if(nmu_output_file_init_ok)\
-         fprintf(nmu_output_file, "%s;chk;%s;%d;OK;%s;\n",\
+         fprintf(nmu_output_file, "chk;%s;%s;%d;OK;%s;\n",\
          nmu_test_name,\
          (MESSAGE_TEST),\
          nmu_checks_run,\
@@ -65,18 +65,18 @@
 #define nmu_init( NMU_TEST_NAME)  do{\
   nmu_output_file = fopen( NMU_TEST_NAME ".nrr" ,"w");\
   if( nmu_output_file ){\
-    printf("%s;ini;%s;OK;\n", \
+    printf("ini;%s;%s;OK;\n", \
       NMU_TEST_NAME, \
       NMU_VERSION \
     );\
-    fprintf(nmu_output_file, "%s;ini;%s;OK;\n", \
+    fprintf(nmu_output_file, "ini;%s;%s;OK;\n", \
       NMU_TEST_NAME, \
       NMU_VERSION \
     );\
     nmu_output_file_init_ok = 1;\
   }else\
   {\
-    printf("%s;ini;%s;KO;\n", \
+    printf("ini;%s;%s;KO;\n", \
       NMU_TEST_NAME, \
       NMU_VERSION \
     );\
@@ -99,7 +99,7 @@
  * 
  * ====================================================================== */ 
 #define nmu_display do {\
-  printf("%s;res;%d;%d;%d;%s\n", \
+  printf("res;%s;%d;%d;%d;%s\n", \
     nmu_test_name, \
     nmu_checks_run,\
     nmu_checks_ok,\
@@ -107,7 +107,7 @@
     (nmu_checks_failed == 0) ? "OK;":"KO;"\
   );\
   if( nmu_output_file )\
-  fprintf(nmu_output_file, "%s;res;%d;%d;%d;%s\n", \
+  fprintf(nmu_output_file, "res;%s;%d;%d;%d;%s\n", \
     nmu_test_name, \
     nmu_checks_run,\
     nmu_checks_ok,\
